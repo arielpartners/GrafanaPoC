@@ -1,0 +1,30 @@
+{
+  "name": "grafanapoc",
+  "version": "0.0.1",
+  "description": "Grafana Proof of Concept",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arielpartners/GrafanaPoC.git"
+  },
+  "dependencies": {
+    "body-parser": "1.17.1",
+    "express": "4.15.2",
+    "moment-timezone": "0.5.12"
+  },
+  "keywords": [
+    "Grafana",
+    "Node",
+    "Javascript"
+  ],
+  "author": "Craeg Strong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arielpartners/GrafanaPoC/issues"
+  },
+  "homepage": "https://github.com/arielpartners/GrafanaPoC#readme"
+}
