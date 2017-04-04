@@ -14,6 +14,36 @@ The data source has to expose the following endpoints:
 It appears that statsd information can be displayed with [InfluxDB](http://www.roblayton.com/2015/05/analyzing-your-applications-with-statsd.html) 
 or [Prometheus](https://github.com/prometheus/statsd_exporter)
 
+## Setup
+
+### Setup Node
+
+ * Install node v7.8 or higher via `nvm`
+ * `npm install`
+ 
+### Grafana Docker Install
+ * Use Grafana Docker image from [dockerhub](https://hub.docker.com/r/grafana/grafana/)
+ * Documentation on installing plugins: `https://github.com/grafana/grafana-docker#installing-plugins-for-grafana-3`
+ * Running with plugins: `docker run -p 3000:3000 -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-simple-json-datasource" grafana/grafana`
+
+## Startup 
+
+### Setup Data Source
+
+ * `npm start` starts the service on port 9000
+ * Run Grafana as per the above docker run command
+ * Navigate to `localhost:3000` in a browser
+ * login as `admin/admin`
+ * Add data source
+   * name: `simplejson` 
+   * type: `SimpleJson` 
+   * url: `http://localhost:9000`
+   * proxy: `direct`
+
+### Import Dashboard
+ * Import `graphana/home-*.json`
+ * Enjoy!
+ 
 ## Reference Info
 Feel free to skip this, this information not needed but kept here for reference.
 
@@ -53,32 +83,3 @@ Feel free to skip this, this information not needed but kept here for reference.
    * Legend values: `on`
    * Legend show percentage: `on`
  * Save dashboard and star it
-
-## Setup
-
-### Setup Node
-
- * Install node v7.8 or higher via `nvm`
- * `npm install`
- 
-### Grafana Docker Install
- * Use Grafana Docker image from [dockerhub](https://hub.docker.com/r/grafana/grafana/)
- * Documentation on installing plugins: `https://github.com/grafana/grafana-docker#installing-plugins-for-grafana-3`
- * Running with plugins: `docker run -p 3000:3000 -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-simple-json-datasource" grafana/grafana`
-
-## Startup 
-
-### Setup Data Source
-
- * `npm start` starts the service on port 9000
- * Run Grafana as per the above docker run command
- * Navigate to `localhost:3000` in a browser
- * login as `admin/admin`
- * Add data source
-   * name: `simplejson` 
-   * type: `SimpleJson` 
-   * url: `http://localhost:9000`
-   * proxy: `direct`
-
-### Import Dashboard
- * Import `graphana/home-*.json`
