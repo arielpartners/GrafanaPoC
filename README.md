@@ -18,16 +18,12 @@ or [Prometheus](https://github.com/prometheus/statsd_exporter)
 
  * Install node v7.8 or higher via `nvm`
  * `npm install`
+ * Skip down to Grafana Docker Install, don't bother with local install
  
 ### Grafana Local Install
  * `brew update; brew install grafana`  See [Grafana Installation instructions](https://grafana.com/grafana/download) for more details.
  * `brew services start grafana` Run Grafana via launchd and restart at login
  * or just run it locally: `grafana-server --config=/usr/local/etc/grafana/grafana.ini --homepath /usr/local/share/grafana cfg:default.paths.logs=/usr/local/var/log/grafana cfg:default.paths.data=/usr/local/var/lib/grafana cfg:default.paths.plugins=/usr/local/var/lib/grafana/plugins`
-
-### Grafana Docker Install
- * Use Grafana Docker image from [dockerhub](https://hub.docker.com/r/grafana/grafana/)
- * Documentation on installing plugins: `https://github.com/grafana/grafana-docker#installing-plugins-for-grafana-3`
- * Running with plugins: `docker run -p 3000:3000 -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-simple-json-datasource" grafana/grafana`
 
 ### Grafana Plugins we use
  * Piechart Plugin: `grafana-cli plugins install grafana-piechart-panel`
@@ -60,6 +56,11 @@ or [Prometheus](https://github.com/prometheus/statsd_exporter)
    * Legend values: `on`
    * Legend show percentage: `on`
  * Save dashboard and star it
+
+### Grafana Docker Install
+ * Use Grafana Docker image from [dockerhub](https://hub.docker.com/r/grafana/grafana/)
+ * Documentation on installing plugins: `https://github.com/grafana/grafana-docker#installing-plugins-for-grafana-3`
+ * Running with plugins: `docker run -p 3000:3000 -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-simple-json-datasource" grafana/grafana`
 
 ## Startup 
 
