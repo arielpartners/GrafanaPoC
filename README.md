@@ -14,12 +14,9 @@ The data source has to expose the following endpoints:
 It appears that statsd information can be displayed with [InfluxDB](http://www.roblayton.com/2015/05/analyzing-your-applications-with-statsd.html) 
 or [Prometheus](https://github.com/prometheus/statsd_exporter)
 
-## Setup
+## Reference Info
+Feel free to skip this, this information not needed but kept here for reference.
 
- * Install node v7.8 or higher via `nvm`
- * `npm install`
- * Skip down to Grafana Docker Install, don't bother with local install
- 
 ### Grafana Local Install
  * `brew update; brew install grafana`  See [Grafana Installation instructions](https://grafana.com/grafana/download) for more details.
  * `brew services start grafana` Run Grafana via launchd and restart at login
@@ -34,8 +31,8 @@ or [Prometheus](https://github.com/prometheus/statsd_exporter)
  * Google calendar plugin to show calendar events as annotations: `grafana-cli plugins install mtanda-google-calendar-datasource`
  * Histogram panel: `grafana-cli plugins install mtanda-histogram-panel`
 
-### Setup Dashboard
-   This only needs to be done if the JSON file is not available for import
+### Dashboard Configuration
+   This is not needed since we have the JSON file is not available for import
    
  * New dashboard: `Home`
  * New Graph
@@ -57,6 +54,13 @@ or [Prometheus](https://github.com/prometheus/statsd_exporter)
    * Legend show percentage: `on`
  * Save dashboard and star it
 
+## Setup
+
+### Setup Node
+
+ * Install node v7.8 or higher via `nvm`
+ * `npm install`
+ 
 ### Grafana Docker Install
  * Use Grafana Docker image from [dockerhub](https://hub.docker.com/r/grafana/grafana/)
  * Documentation on installing plugins: `https://github.com/grafana/grafana-docker#installing-plugins-for-grafana-3`
