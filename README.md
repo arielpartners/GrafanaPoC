@@ -1,6 +1,6 @@
 # GrafanaPoC
 
-##Overview
+## Overview
 Proof of concept for displaying application performance monitoring information in [Grafana](https://grafana.com)
 Grafana normally reads information from a data source such as a timeseries nosql database like Prometheus.
 This demonstrates how to use Grafana with the [SimpleJson data source.](https://grafana.com/plugins/grafana-simple-json-datasource)
