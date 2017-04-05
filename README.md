@@ -22,9 +22,8 @@ or [Prometheus](https://github.com/prometheus/statsd_exporter)
  * `npm install`
  
 ### Grafana Docker Install
- * Use Grafana Docker image from [dockerhub](https://hub.docker.com/r/grafana/grafana/)
- * Documentation on installing plugins: `https://github.com/grafana/grafana-docker#installing-plugins-for-grafana-3`
- * Running with plugins: `docker run -p 3000:3000 -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-simple-json-datasource" grafana/grafana`
+ * We are using the Grafana Docker image from [dockerhub](https://hub.docker.com/r/grafana/grafana/)
+ * Run the image with plugins: `docker run -p 3000:3000 -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-simple-json-datasource" grafana/grafana`
 
 ## Startup 
 
@@ -41,7 +40,11 @@ or [Prometheus](https://github.com/prometheus/statsd_exporter)
    * proxy: `direct`
 
 ### Import Dashboard
- * Import `graphana/home-*.json`
+ * Click top left orange icon
+ * Dashboards -> Import
+ * Upload JSON file: `graphana/home-*.json`
+ * Select datasource: `simplejson`
+ * Click `Import` button
  * Enjoy!
  
 ## Reference Info
@@ -51,6 +54,7 @@ Feel free to skip this, this information not needed but kept here for reference.
  * `brew update; brew install grafana`  See [Grafana Installation instructions](https://grafana.com/grafana/download) for more details.
  * `brew services start grafana` Run Grafana via launchd and restart at login
  * or just run it locally: `grafana-server --config=/usr/local/etc/grafana/grafana.ini --homepath /usr/local/share/grafana cfg:default.paths.logs=/usr/local/var/log/grafana cfg:default.paths.data=/usr/local/var/lib/grafana cfg:default.paths.plugins=/usr/local/var/lib/grafana/plugins`
+ * Documentation on installing plugins: `https://github.com/grafana/grafana-docker#installing-plugins-for-grafana-3`
 
 ### Grafana Plugins we use
  * Piechart Plugin: `grafana-cli plugins install grafana-piechart-panel`
