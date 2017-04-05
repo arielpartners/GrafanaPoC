@@ -52,8 +52,8 @@ Feel free to skip this, this information not needed but kept here for reference.
 
 ### Grafana Local Install
  * `brew update; brew install grafana`  See [Grafana Installation instructions](https://grafana.com/grafana/download) for more details.
- * `brew services start grafana` Run Grafana via launchd and restart at login
- * or just run it locally: `grafana-server --config=/usr/local/etc/grafana/grafana.ini --homepath /usr/local/share/grafana cfg:default.paths.logs=/usr/local/var/log/grafana cfg:default.paths.data=/usr/local/var/lib/grafana cfg:default.paths.plugins=/usr/local/var/lib/grafana/plugins`
+ * Either run Grafana via launchd and restart at login: `brew services start grafana` 
+ * Or run Grafana locally: `grafana-server --config=/usr/local/etc/grafana/grafana.ini --homepath /usr/local/share/grafana cfg:default.paths.logs=/usr/local/var/log/grafana cfg:default.paths.data=/usr/local/var/lib/grafana cfg:default.paths.plugins=/usr/local/var/lib/grafana/plugins`
  * Documentation on installing plugins: `https://github.com/grafana/grafana-docker#installing-plugins-for-grafana-3`
 
 ### Grafana Plugins we use
@@ -66,7 +66,7 @@ Feel free to skip this, this information not needed but kept here for reference.
  * Histogram panel: `grafana-cli plugins install mtanda-histogram-panel`
 
 ### Dashboard Configuration
-   This is not needed since we have the JSON file is not available for import
+   This is not needed unless the JSON file is not available for import
    
  * New dashboard: `Home`
  * New Graph
