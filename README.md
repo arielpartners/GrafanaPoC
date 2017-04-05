@@ -43,7 +43,7 @@ or [Prometheus](https://github.com/prometheus/statsd_exporter)
  * Click top left orange icon
  * Dashboards -> Import
  * Upload JSON file: `graphana/home-*.json`
- * Select datasource: `simplejson`
+ * Select datasource from dropdown: `simplejson`
  * Click `Import` button
  * Enjoy!
  
