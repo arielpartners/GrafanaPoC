@@ -18,12 +18,14 @@ or [Prometheus](https://github.com/prometheus/statsd_exporter)
 
 ### Setup Node
 
+ * Clone this repo
  * Install node v7.8 or higher via `nvm`
  * `npm install`
  
 ### Grafana Docker Install
- * We are using the Grafana Docker image from [dockerhub](https://hub.docker.com/r/grafana/grafana/)
- * Run the image with plugins: `docker run -p 3000:3000 -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-simple-json-datasource" grafana/grafana`
+ * Install Docker for example [Docker for Mac](https://docs.docker.com/docker-for-mac/)
+ * Run the image with plugins: `docker run -p 3000:3000 -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-simple-json-datasource" grafana/grafana`'
+ * The first time you run the above, it will automatically download the Grafana image from [dockerhub](https://hub.docker.com/r/grafana/grafana/)
 
 ## Startup 
 
